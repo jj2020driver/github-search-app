@@ -1,0 +1,73 @@
+.page-header {
+	.logo {
+		display: flex;
+		align-items: center;
+		line-height: 1;
+		color: $color-company;
+		&__image {
+		    flex: none;
+		    width: 40px;
+		    max-height: 38px;
+		}
+		&__name {
+			text-align: left;
+			&__title {
+				margin-top: -2px;
+				font-size: 29px;
+				font-weight: 700;
+				letter-spacing: 1px;
+			}
+			&__subtitle {
+				font-size: 15px;
+			}
+		}
+	}
+	.app-name {
+		font-size: 17px;
+		font-weight: 500;
+		color: $color-company;
+	}
+	.pct {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 35px 0 25px;
+		border-bottom: 1px solid $color-company;
+	}
+	@include r($bp-desktop-md) {
+		.pct {
+			padding: 25px 0;
+		}
+	}
+	@include r($bp-tab-sm) {
+		.logo {
+			// &__image {
+			//     width: 51px;
+			//     max-height: 35px;
+			//     margin-right: 9px;
+			// }
+			&__name {
+				text-align: left;
+				&__title {
+					font-size: 27px;
+					letter-spacing: 1.3px;
+				}
+				&__subtitle {
+					font-size: 14px;
+				}
+			}
+		}
+		.pct {
+			padding: 20px 0;
+		}
+	}
+	@include r($bp-phone-md) {
+		.app-name {
+			margin-top: 12px;
+		}
+		.pct {
+			padding: 14px 0 17px;
+			flex-direction: column;
+		}
+	}
+}
