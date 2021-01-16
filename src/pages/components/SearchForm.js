@@ -46,7 +46,7 @@ function SearchForm() {
 	return (
 		<form onSubmit={handleSubmit}>
 			<DebounceInput
-			  placeholder="Search Github for..."
+			  placeholder="Search by org or username..."
 			  className="input"
 	          minLength={3}
 	          debounceTimeout={800}

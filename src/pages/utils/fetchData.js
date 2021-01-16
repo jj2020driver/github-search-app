@@ -18,7 +18,6 @@ async function fetchData(searchTerm, page, currentData) {
 		if (results.length === 1) {
 			return results;
 		}
-		// console.log(results);
 		let merged = results[0];
 
 		for(let i = 1; i < results.length; i++) {
@@ -35,18 +34,14 @@ async function fetchData(searchTerm, page, currentData) {
 	let resultData = [];
 	let hasMore = true;
 	const urls = [
-		`https://api.github.com/search/repositories?q=${searchTerm}&page=${page}`,
+		// `https://api.github.com/search/repositories?q=${searchTerm}&page=${page}`,
 		`https://api.github.com/users/${searchTerm}/repos?page=${page}`,
 		`https://api.github.com/orgs/${searchTerm}/repos?page=${page}`
 	];
 	const requests = [];
 
 	urls.forEach(url => {
-		requests.push(reflect(fetch(url, {
-		    headers: {
-		      authorization: "token e3b8cd4b4bb65209cfd5bb32a7f86107dba7b139"
-		    }
-		})));
+		requests.push(reflect(fetch(url)));
 	});
 
 	await Promise.all(requests)
@@ -58,7 +53,8 @@ async function fetchData(searchTerm, page, currentData) {
 			}
 		})))
 		.then(responses => {
-			resultData = combineResults(responses[0].items, responses[1], responses[2])
+			// let responseRepos = responses[0].items ? responses[0].items : [];
+			resultData = combineResults(responses[0], responses[1])
 		});
 
 	return { resultData, hasMore };

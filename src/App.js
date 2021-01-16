@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Switch, Route } from "react-router-dom";
 import './App.scss';
 import Home from "./pages/Home";
@@ -5,7 +6,7 @@ import Home from "./pages/Home";
 function App() {
     return (
         <div id="app">
-                    <Home />
+            <Home />
         </div>
     );
 }
