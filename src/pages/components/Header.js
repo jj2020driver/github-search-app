@@ -2,8 +2,8 @@ import logo from '../../assets/images/logo.svg';
 
 function Header() {
 	return (
-		<header className="page-header">
-			<div className="pwr"><div className="pct">
+		<header className="page-section page-header">
+			<div className="page-wrapper"><div className="page-container">
 
 				<a href="https://github.com/" className="logo">
 					<img src={logo} className="logo__image" alt="logo" />

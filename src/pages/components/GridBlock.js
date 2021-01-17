@@ -6,11 +6,11 @@ function GridBlock({ html_url, full_name, language, description }) {
 			<h3 className="grid-block__title"><a href={html_url} target="_blank">{ full_name }</a></h3>
 			{
 				language
-				&& <div className="grid-block__info">Language: <span className="grid-block__info__value">{ language }</span></div>
+				&& <div className="grid-block__info">Language: <span className="grid-block__value">{ language }</span></div>
 			}
 			{
 				description
-				&& <div className="grid-block__info">Description: <span className="grid-block__info__value">{ description }</span></div>
+				&& <div className="grid-block__info">Description: <span className="grid-block__value">{ description }</span></div>
 			}
 		</div>
 	);

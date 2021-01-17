@@ -38,16 +38,15 @@ a {
 
 
 // basic page grid elements
-.pwr {
+.page-container {
+	padding: 40px 0;
+}
+.page-wrapper {
 	@include clr;
 	position: relative;
 	width: 1140px;
 	max-width: 100%;
 	margin: 0 auto;
-
-	.pct {
-		padding: 40px 0;
-	}
 
 	@include r($bp-desktop-sm) {
 		padding: 0 24px;
